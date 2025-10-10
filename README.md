@@ -1,4 +1,5 @@
-![Logo OLC](<img width="1024" height="1024" alt="AJfQ9KTSw1_zdaO8Sn8VEq5Z_penn9lfFVR5ay37KtTdSaxKb4wKQ1xjwaQIg0L9HMjZAKsSzWNHzcKsqdv3ILVo5CHtcALfs9-OiwVNxO2icahM7k8Px8zvUdlsf1l6JkWWk1bqktFl4uhmcpcft-JWmP6sValHwBXz1RdFZORot1k8U3naGws1024-rj" src="https://github.com/user-attachments/assets/65cf873d-ce79-4758-b5a6-69cc3266c2f7" />)
+![Logo OLC](<img width="1024" height="1024" alt="AJfQ9KTSw1_zdaO8Sn8VEq5Z_penn9lfFVR5ay37KtTdSaxKb4wKQ1xjwaQIg0L9HMjZAKsSzWNHzcKsqdv3ILVo5CHtcALfs9-OiwVNxO2icahM7k8Px8zvUdlsf1l6JkWWk1bqktFl4uhmcpcft-JWmP6sValHwBXz1RdFZORot1k8U3naGws1024-rj" src="https://github.com/user-attachments/assets/e3b77760-a277-426f-9fb6-601b1d16779b" />
+)
 
 
 # Projeto Concessionária OLC - Atividade de Métodos Ágeis
