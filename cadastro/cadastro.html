@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Veículos</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-logo-container"> <img src="olc - logomarca.jpg" alt="logo concessionária olc" class="logo-real">
+        </div>
+        
+        <form action="#" method="POST">
+            
+            <div class="section-title">Sobre o Cliente</div>
+            
+            <div class="form-group">
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="CPF" required>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="endereco" name="endereco" placeholder="Endereço" required>
+            </div>
+
+            <div class="form-group margin-lg"> 
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="comprador" name="comprador" placeholder="Comprador" required>
+            </div>
+
+            <div class="section-title">Carro</div>
+            <div class="form-group inline-fields">
+                <div>
+
+                    <input type="text" id="modelo" name="modelo" placeholder="Modelo" required>
+                </div>
+
+                <div>
+                    <input type="text" id="placa" name="placa" placeholder="Placa" required>
+                </div>
+            </div>
+
+            <div class="form-group inline-fields">
+                <div>
+                    <input type="text" id="valor" name="valor" placeholder="Valor" required>
+                </div>
+                <div>
+                    <input type="text" id="cor" name="cor" pattern="..." ... placeholder="Cor" required>
+                </div>
+            </div>
+
+            <div class="form-group inline-fields">
+                <div>
+                    <input type="text" id="ano" name="ano" placeholder="Ano" maxlength="4" required>
+                </div>
+            </div>
+
+            <div class="payment-conditions">
+                <div class="section-title">Condição de Pagamento</div>
+
+                <div class="payment-options">
+                    <div class="radio-group">
+                        <input type="checkbox" id="pagamento-pix" name="condicao-pagamento[]" value="pix">
+                        <label for="pagamento-pix">Pix</label>
+                    </div>
+
+                    <div class="radio-group">
+                        <input type="checkbox" id="pagamento-financiamento" name="condicao-pagamento[]" value="financiamento">
+                        <label for="pagamento-financiamento">Financiamento</label>
+                    </div>
+
+                    <div class="radio-group">
+                        <input type="checkbox" id="pagamento-boleto" name="condicao-pagamento[]" value="boleto">
+                        <label for="pagamento-boleto">Boleto</label>
+                    </div>
+
+                    <div class="radio-group">
+                        <input type="checkbox" id="pagamento-cartao" name="condicao-pagamento[]" value="cartao">
+                        <label for="pagamento-cartao">Cartão</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="submit-button-container">
+                <button type="submit">Cadastrar Veículo</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
