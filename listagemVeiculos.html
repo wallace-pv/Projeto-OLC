@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLC - Listagem de Veículos</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <img src="assets/logo.png" alt="Logo OLC" class="logo-header">
+            <h1>Veículos Cadastrados</h1>
+            </header>
+
+        <div class="actions-container">
+            <input type="text" id="campo-busca" placeholder="Buscar por placa, modelo ou proprietário...">
+            <a href="cadastro.html" class="btn">Cadastrar Novo Veículo</a>
+        </div>
+
+        <div class="table-container">
+            <table class="vehicle-table">
+                <thead>
+                    <tr>
+                        <th>Placa</th>
+                        <th>Modelo</th>
+                        <th>Proprietário</th>
+                        <th>Valor (R$)</th>
+                        <th>Ano</th>
+                        <th>Cor</th>
+                        <th>Ações</th> </tr>
+                </thead>
+                <tbody id="tabela-veiculos-corpo">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>
