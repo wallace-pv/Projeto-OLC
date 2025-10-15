@@ -1,226 +1,383 @@
-/* ==========================================================================
-   1. ESTILOS GLOBAIS E PADRÕES
-   - CORREÇÃO: Aplicando o linear-gradient e a fonte padrão.
-   ========================================================================== */
+/* ===== RESET GERAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', Helvetica, sans-serif;
+}
+
+/* ========================================================= */
+/* ===== ESTILOS GLOBAIS (Compartilhados: Body, Fundo, Animação) ===== */
+/* ========================================================= */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(#346173ec, #0869a6ef, #1c618c);
-    color: #333;
-    min-height: 100vh;
+  min-height: 100vh;
+  background-image: url("../assets/background07.jpg"); /* imagem de carro */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  backdrop-filter: blur(5px) grayscale(50%);
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* ==========================================================================
-   2. ESTILOS PARA TELAS DE LOGIN E CADASTRO DE USUÁRIO
-   ========================================================================== */
+/* ========================================================= */
+/* ===== ESTILOS PARA LOGIN/CADASTRO PADRÃO (CSS ORIGINAL MODIFICADO) ===== */
+/* ========================================================= */
+
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  /* Usado para envolver e centralizar o .login-box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
 }
 
 .login-box {
-    background: #ffffff;
-    padding: 20px 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 380px;
-    text-align: center;
+  /* Estilo da caixa de login/cadastro (pequena) */
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.568),rgba(255, 255, 255, 0.685),rgba(255, 255, 255, 0.87));  
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  padding: 40px;
+  width: 340px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.6s ease;
 }
 
-.login-box .logo {
-    max-width: 150px;
-    margin-bottom: 20px;
+.logo {
+  /* Logo da página de login/cadastro padrão */
+  width: 120px;
+  margin-bottom: 15px;
 }
 
-.login-box h2 {
-    margin-bottom: 20px;
-    color: #ff6600; 
+header h2 {
+  /* Título de login/cadastro padrão (AGORA COM LINHA INFERIOR) */
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 25px;  
+  color: #d6521c;
+  
+  /* NOVO: Linha de destaque para os títulos de outras páginas */
+  border-bottom: 2px solid #f2622e; 
+  padding-bottom: 5px;
+  margin-bottom: 30px; /* Aumentei a margem para compensar o padding-bottom */
+}
+
+.input-container {
+  /* Contêiner de campo de login/cadastro padrão */
+  text-align: left;
+  margin-bottom: 15px;
+  
+}
+
+.input-container label {
+  /* Label de campo de login/cadastro padrão */
+  display: block;
+  color: #d6521c;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 8px;
+  
+}
+
+.input-container input {
+  /* Input de campo de login/cadastro padrão */
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background-color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.input-container input:focus {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(242, 98, 46, 0.8);
+}
+
+.btn {
+  /* Botão de login/cadastro padrão */
+  width: 100%;
+  padding: 12px;
+  background-color: #f2622e; /* cor da logo */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #d6521c;
+  transform: scale(1.02);
 }
 
 .login-footer {
-    margin-top: 15px;
+  /* Rodapé de login/cadastro padrão */
+  margin-top: 15px;
 }
 
 .login-footer a {
-    color: #1877f2;
-    text-decoration: none;
+  color: #d6521c;
+  text-decoration: underline;
+  font-size: 14px;
 }
 
 .login-footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* ==========================================================================
-   3. ESTILOS GERAIS PARA FORMULÁRIOS
-   - CORREÇÃO: Fundo mais claro para os inputs.
-   ========================================================================== */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+/* ========================================================= */
+/* ===== ESTILOS ESPECÍFICOS PARA CADASTRO DE VEÍCULOS (SEM ALTERAÇÃO) ===== */
+/* ========================================================= */
+
+.container {
+  /* Substitui .login-box para o formulário MAIOR de cadastro de veículos */
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.568),rgba(255, 255, 255, 0.685),rgba(255, 255, 255, 0.87));
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  padding: 30px; 
+  width: 90%; 
+  max-width: 600px; /* Largura máxima para o formulário */
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.6s ease;
+  margin: 20px 0; 
 }
 
-.input-container, .form-group {
-    width: 100%;
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"] {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #dddfe2;
-    border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 16px;
-    /* CORREÇÃO: Fundo mais claro para os inputs */
-    background-color: #f0f2f5; 
-}
-
-.btn, button[type="submit"] {
-    background-color: #1877f2;
-    color: white;
-    border: none;
-    padding: 14px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-}
-
-.btn:hover, button[type="submit"]:hover {
-    background-color: #166fe5;
-}
-
-
-/* ==========================================================================
-   4. ESTILOS ESPECÍFICOS DO CADASTRO DE VEÍCULOS
-   ========================================================================== */
 .header-logo-container {
-    text-align: center;
-    margin-bottom: 20px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-logo-container .logo-real {
-    max-width: 200px;
+.logo-real {
+  /* Logo específica deste formulário */
+  width: 150px; 
+  height: auto;
 }
 
 .section-title {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #ff6600;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 8px;
+  /* Título de seção dentro do formulário (JÁ TINHA A LINHA, MANTIDO) */
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #d6521c; 
+  text-align: left;
+  border-bottom: 2px solid #f2622e; 
+  padding-bottom: 5px;
 }
 
-.form-group.inline-fields {
-    display: flex;
-    gap: 20px;
+/* Estilos de input aplicados à classe específica do formulário */
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
 }
 
-.form-group.inline-fields > div {
-    flex: 1;
+.form-group input {
+  /* Estilo unificado para todos os inputs neste formulário */
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background-color: rgba(255,255,255,0.85);
+  font-size: 16px;
+  color: #333; 
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(242, 98, 46, 0.8);
+  
+}
+
+/* Placeholder Style */
+::placeholder {
+  color: rgba(51, 51, 51, 0.6);
+}
+
+.margin-lg {
+  margin-bottom: 25px; 
+}
+
+/* Campos em linha */
+.inline-fields {
+  
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background-color: rgba(255,255,255,0.85);
+  font-size: 16px;
+  color: #333; 
+  transition: all 0.2s ease;
+  
+}
+
+
+.inline-fields > div {
+  display: inline;
+  margin: 10px;
+  
+}
+
+.inline-fields:last-of-type {
+    justify-content: flex-start; 
+    
+}
+
+.inline-fields:last-of-type > div {
+    max-width: calc(50% - 7.5px); 
+}
+
+/* Condições de Pagamento (Checkboxes) */
+.payment-conditions {
+  text-align: left;
+  margin-top: 30px;
 }
 
 .payment-options {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 15px;
+  margin-top: 10px;
 }
 
 .radio-group {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  color: #333; 
+  font-weight: 500;
 }
 
+.radio-group label {
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Estilo do Checkbox Customizado */
+.radio-group input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f2622e;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+}
+
+.radio-group input[type="checkbox"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #f2622e; 
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 50% 40%); 
+}
+
+.radio-group input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+/* Botão de Submissão */
 .submit-button-container {
-    margin-top: 20px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+.submit-button-container button[type="submit"] {
+  /* Baseado no .btn, mas adaptado para o novo contêiner/tamanho */
+  width: 100%;
+  padding: 14px;
+  background-color: #f2622e; 
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.submit-button-container button[type="submit"]:hover {
+  background-color: #d6521c;
+  transform: scale(1.01); 
 }
 
 
-/* ==========================================================================
-   5. ESTILOS DA PÁGINA DE LISTAGEM DE VEÍCULOS
-   ========================================================================== */
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
+/* ========================================================= */
+/* ===== RESPONSIVIDADE (Aplica-se a ambos os layouts) ===== */
+/* ========================================================= */
 
-.main-header .logo-header {
-    max-width: 150px;
-}
+@media (max-width: 650px) {
+  /* Ajustes para o formulário de cadastro de veículos */
+  .container {
+    padding: 25px 20px;
+    max-width: 95%;
+  }
 
-.actions-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 20px;
-}
+  .inline-fields {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-#campo-busca {
-    flex-grow: 1;
-    max-width: 500px;
-    padding: 12px;
-}
-
-.table-container {
+  .inline-fields > div {
+    flex: none;
     width: 100%;
-    overflow-x: auto;
+  }
+    
+  .inline-fields:last-of-type > div {
+      max-width: 100%;
+  }
+
+  .payment-options {
+    flex-direction: column; 
+    gap: 10px;
+  }
+    
+  .section-title {
+      font-size: 20px;
+  }
 }
 
-.vehicle-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.vehicle-table th, .vehicle-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-}
-
-.vehicle-table thead {
-    background-color: #f2f2f2;
-}
-
-.vehicle-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.vehicle-table tbody tr:hover {
-    background-color: #e9e9e9;
+@media (max-width: 400px) {
+  /* Ajustes para o layout de login/cadastro padrão */
+  .login-box {
+    width: 90%;
+    padding: 30px 20px;
+  }
+  header h2 {
+    font-size: 18px;
+    /* Ajusta a margem do novo h2 em telas pequenas */
+    margin-bottom: 20px; 
+  }
 }

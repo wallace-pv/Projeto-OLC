@@ -211,3 +211,20 @@ document.addEventListener('DOMContentLoaded', () => {
         renderizarVeiculos();
     }
 });
+
+function abrirPopup(modelo, marca, cor, ano, valor, comprador, condicao, imagem) {
+  document.getElementById("popup-modelo").textContent = modelo;
+  document.getElementById("popup-marca").textContent = marca;
+  document.getElementById("popup-cor").textContent = cor;
+  document.getElementById("popup-ano").textContent = ano;
+  document.getElementById("popup-valor").textContent = valor;
+  document.getElementById("popup-comprador").textContent = comprador;
+  document.getElementById("popup-condicao").textContent = condicao;
+ 
+
+  document.getElementById("popup-veiculo").style.display = "flex";
+}
+
+function fecharPopup() {
+  document.getElementById("popup-veiculo").style.display = "none";
+}
