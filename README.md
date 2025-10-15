@@ -2,7 +2,7 @@
 
 # Projeto Concessionária OLC - Atividade de Métodos Ágeis
 
-Este é um projeto acadêmico desenvolvido para a disciplina de **Métodos Ágeis** do curso de Análise e Desenvolvimento de Sistemas. [cite_start]O principal objetivo é capacitar o aluno a compreender e aplicar os princípios e práticas das metodologias ágeis, com foco na utilização do framework Scrum e de ferramentas de gestão como o Jira[cite: 1].
+Este é um projeto acadêmico desenvolvido para a disciplina de **Métodos Ágeis** do curso de Análise e Desenvolvimento de Sistemas. O principal objetivo é capacitar o aluno a compreender e aplicar os princípios e práticas das metodologias ágeis, com foco na utilização do framework Scrum e de ferramentas de gestão como o Jira.
 
 ## 🚀 Sobre o Projeto
 
@@ -27,7 +27,7 @@ O projeto consiste em uma página web simples para a concessionária fictícia "
 
 ## Metodologias Ágeis e Jira
 
-[cite_start]Todo o desenvolvimento deste projeto foi gerenciado utilizando a metodologia **Scrum**, um dos frameworks abordados na disciplina[cite: 1]. [cite_start]O Product Backlog, a divisão em Sprints e o acompanhamento das tarefas (Features) foram realizados na ferramenta Jira, atendendo a um dos objetivos da disciplina de "Utilizar ferramentas de gestão de projetos ágeis"[cite: 1].
+Todo o desenvolvimento deste projeto foi gerenciado utilizando a metodologia **Scrum**, um dos frameworks abordados na disciplina. O Product Backlog, a divisão em Sprints e o acompanhamento das tarefas (Features) foram realizados na ferramenta Jira, atendendo a um dos objetivos da disciplina de "Utilizar ferramentas de gestão de projetos ágeis".
 
 ## 🏃 Como Executar o Projeto
 
