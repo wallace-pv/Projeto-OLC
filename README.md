@@ -1,4 +1,4 @@
-![Logo OLC](./assets/logo.png)
+![Logo OLC](./assets/olc_-_logomarca-removebg-preview.png)
 
 # Projeto Concessionária OLC - Atividade de Métodos Ágeis
 
